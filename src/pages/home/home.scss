@@ -1,3 +1,11 @@
 page-home {
-
+  .md-button{
+    padding: 15px 10px !important;
+    background: transparent;
+    color: #488aff;
+    box-shadow: none;
+  }
+  .md-button.disable{
+    color: lightgray;
+  }
 }

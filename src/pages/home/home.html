@@ -5,13 +5,32 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-card>
+    <ion-card-header>
+      Header
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label floating>Create New..</ion-label>
+        <ion-input type="text" [(ngModel)]="newInput"></ion-input>
+        <button ion-button icon-only item-end class="md-button" [ngClass]="{'disable':!newInput}"><ion-icon name="checkmark-circle"></ion-icon></button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      Friends
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="https://pbs.twimg.com/profile_images/564353911473967104/rDqJgxFZ.jpeg">
+          </ion-avatar>
+          <h3>Bibi</h3>
+          <p>I've had a pretty messed up day. If we just...</p>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
