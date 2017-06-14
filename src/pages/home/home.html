@@ -1,14 +1,19 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Be Friendly!</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-card>
     <ion-card-header>
-      Header
+      Your History
     </ion-card-header>
+    <ion-card-content>
+      <canvas #lineCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
     <ion-card-content>
       <ion-item>
         <ion-label floating>Create New..</ion-label>
@@ -23,12 +28,12 @@
     </ion-card-header>
     <ion-card-content>
       <ion-list>
-        <ion-item>
+        <ion-item *ngFor="let ppl of ppls" (click)="openModal(ppl)">
           <ion-avatar item-start>
-            <img src="https://pbs.twimg.com/profile_images/564353911473967104/rDqJgxFZ.jpeg">
+            <img src="{{ppl.picture}}">
           </ion-avatar>
-          <h3>Bibi</h3>
-          <p>I've had a pretty messed up day. If we just...</p>
+          <h3>{{ppl.name}}</h3>
+          <p>{{ppl.status}}</p>
         </ion-item>
       </ion-list>
     </ion-card-content>
